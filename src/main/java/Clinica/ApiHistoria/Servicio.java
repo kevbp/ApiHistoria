@@ -25,6 +25,8 @@ public class Servicio {
     public Historia actualizar(Long id, Historia his) {
         return repo.findById(id).map(existing -> {
             existing.setIdPac(his.getIdPac());
+            existing.setFecCre(his.getFecCre());
+            existing.setHorCre(his.getHorCre());
             existing.setIdEmp(his.getIdEmp());
             return repo.save(existing);
         }).orElse(null);
