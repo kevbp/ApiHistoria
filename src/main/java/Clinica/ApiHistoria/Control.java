@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("/historia")
 public class Control {
+
     @Autowired
     private Servicio serv;
 
@@ -30,6 +30,11 @@ public class Control {
     @GetMapping("/buscar/{id}")
     public Historia buscar(@PathVariable Long id) {
         return serv.buscar(id);
+    }
+
+    @GetMapping("/buscarPorPaciente/{idPac}")
+    public Historia buscarPorPaciente(@PathVariable Long idPac) {
+        return serv.buscarPorPaciente(idPac);
     }
 
     @GetMapping("/listar")

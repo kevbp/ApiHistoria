@@ -18,6 +18,10 @@ public class Servicio {
         return repo.findById(id).orElse(null);
     }
 
+    public Historia buscarPorPaciente(Long idPac) {
+        return repo.findByIdPac(idPac);
+    }
+
     public List<Historia> listar() {
         return repo.findAll();
     }

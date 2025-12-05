@@ -13,17 +13,17 @@ public class Historia {
     private Long id;
     private Long idPac;
     private String fecCre;
-    private String HorCre;
+    private String horCre;
     private Long idEmp;
 
     public Historia() {
     }
 
-    public Historia(Long id, Long idPac, String fecCre, String HorCre, Long idEmp) {
+    public Historia(Long id, Long idPac, String fecCre, String horCre, Long idEmp) {
         this.id = id;
         this.idPac = idPac;
         this.fecCre = fecCre;
-        this.HorCre = HorCre;
+        this.horCre = horCre;
         this.idEmp = idEmp;
     }
 
@@ -52,11 +52,11 @@ public class Historia {
     }
 
     public String getHorCre() {
-        return HorCre;
+        return horCre;
     }
 
-    public void setHorCre(String HorCre) {
-        this.HorCre = HorCre;
+    public void setHorCre(String horCre) {
+        this.horCre = horCre;
     }
 
     public Long getIdEmp() {

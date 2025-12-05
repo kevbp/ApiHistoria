@@ -11,5 +11,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author broncake
  */
 public interface Repositorio extends JpaRepository<Historia, Long>{
-    
+    Historia findByIdPac(Long idPac);
 }
